@@ -20,20 +20,13 @@
     </header>
 
     <section class="screen active" id="homeScreen">
-      <div class="greeting"><p class="eyebrow" id="todayDate"></p><h1>Ready when<br>you are.</h1></div>
-      <div class="start-card">
-        <div class="card-topline"><span class="live-dot"></span><span>YOUR NEXT SESSION</span></div>
-        <h2 id="nextWorkoutName">Choose a workout</h2>
-        <p id="nextWorkoutMeta">Your training, your pace.</p>
-        <button class="primary-button" id="startWorkoutButton">Start workout <span>↗</span></button>
-      </div>
-      <div class="section-heading"><div><p class="eyebrow">MADE FOR YOU</p><h2>Your workouts</h2></div><button class="text-button" id="addWorkoutButton">＋ New</button></div>
-      <div id="workoutList" class="workout-list"></div>
+      <div class="greeting"><p class="eyebrow" id="todayDate"></p><h1>What are we<br>training today?</h1></div>
+      <div class="select-card"><p class="eyebrow">BUILD TODAY’S SESSION</p><p>Choose a split, then pick the exercises you want to do.</p><button class="primary-button" id="startWorkoutButton">Select workout <span>↗</span></button></div>
       <div class="home-footer"><span class="tiny-dot"></span> Your log stays on this device</div>
     </section>
 
     <section class="screen" id="sessionScreen">
-      <div class="session-header"><button class="back-button" id="endWorkoutButton">← <span>Finish</span></button><div class="session-tools"><button class="unit-toggle" id="unitToggle" aria-label="Switch weight units">LB</button><div class="session-clock" id="sessionClock">00:00</div><button class="icon-button small" id="sessionMenuButton">···</button></div></div>
+      <div class="session-header"><button class="back-button" id="endWorkoutButton">← <span>Finish</span></button><div class="session-tools"><button class="unit-toggle" id="unitToggle" aria-label="Switch weight units">LB</button><button class="icon-button small" id="sessionMenuButton">···</button></div></div>
       <div class="session-title"><p class="eyebrow">WORKOUT IN PROGRESS</p><h1 id="sessionWorkoutName"></h1><p id="sessionProgress"></p><div id="restBar" class="rest-bar" hidden><div class="rest-info"><span class="rest-pulse"></span><span>REST</span><strong id="restClock">00:45</strong></div><div class="rest-track"><span id="restFill"></span></div><button id="skipRestButton">Skip ↗</button></div></div>
       <div id="exerciseList" class="exercise-list"></div>
       <button class="add-exercise-button" id="addExerciseButton">＋ Add exercise</button>
@@ -55,3 +48,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
