@@ -57,7 +57,7 @@ function editWorkout(w){const options=relevantExercises(w.name);openModal(esc(w.
 const exerciseGroups={
  chest:['Incline Barbell Bench Press','Incline Dumbbell Press','Flat Barbell Bench Press','Flat Dumbbell Press','Flat Dumbbell Chest Fly','Machine Chest Press','Cable Chest Fly'],
  back:['Pull-ups','Wide Lat Pulldown','Close Lat Pulldown','Bent-over Barbell Row','Chest-supported Row','Seated Cable Row','Barbell T-Bar Row','Bent-over Smith Machine Row','Single-arm Dumbbell Row'],
- shoulders:['Standing Dumbbell Press','Seated Dumbbell Press','Standing Barbell Press','Dumbbell Lateral Raises','Front Dumbbell Raises','EZ-Bar Upright Row','Cable Lateral Raises','Reverse Pec Deck','Machine Shoulder Press','Bent-over Rear Delt Fly','Cable Face Pull'],
+ shoulders:['Standing Dumbbell Press','Seated Dumbbell Press','Standing Barbell Press','Lateral Dumbbell Raises','Front Dumbbell Raises','EZ-Bar Upright Row','Cable Lateral Raises','Reverse Pec Deck','Machine Shoulder Press','Bent-over Rear Delt Fly','Cable Face Pull'],
  biceps:['Standing Dumbbell Curl','Seated Incline Dumbbell Curl','Hammer Curl','Incline Hammer Curl','Preacher Curl','EZ-Bar Curl','Cable Curl'],
  triceps:['Straight-bar Pushdown','Overhead Cable Tricep Extension','Rope Tricep Pushdown','Skull Crushers','Overhead Dumbbell Extension','Dips','Dumbbell Kickbacks'],
  legs:['Barbell Back Squat','Barbell Front Squat','Leg Press','Barbell Deadlifts','Dumbbell Deadlifts','Smith Machine Squat','Leg Extension','Walking Lunges','Reverse Lunges']
