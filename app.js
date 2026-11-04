@@ -18,6 +18,7 @@ function renderHome(){const d=new Date();$('#todayDate').textContent=d.toLocaleD
 function switchScreen(id){$$('.screen').forEach(s=>s.classList.toggle('active',s.id===id));$$('.tab').forEach(t=>t.classList.toggle('active',t.dataset.screen===id));if(id==='historyScreen')renderHistory()}
 function startSession(){chooseWorkoutSplit()}
 function updateClock(){if(!session)return;const n=Math.floor((Date.now()-session.start)/1000);$('#sessionClock').textContent=`${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`}
+function focusSetField(ei,si,field){const input=document.querySelector(`.set-input[data-e="${ei}"][data-s="${si}"][data-field="${field}"]`);if(input){input.focus();return}if(ei<session.exercises.length){session.exercises[ei].expanded=true;renderSession();document.querySelector(`.set-input[data-e="${ei}"][data-s="${si}"][data-field="${field}"]`)?.focus()}}
 function renderSession(){
  if(!session)return;
  $('#sessionWorkoutName').textContent=session.name;
@@ -32,7 +33,7 @@ function renderSession(){
  }).join('')).join('');
  updateRestUI();
  $$('.exercise-toggle').forEach(b=>b.onclick=()=>{const e=session.exercises[+b.dataset.expand];e.expanded=!e.expanded;renderSession()});
- $$('.set-input').forEach(inp=>inp.onchange=()=>{const s=session.exercises[+inp.dataset.e].sets[+inp.dataset.s];s[inp.dataset.field]=Number(inp.value)||0;if(inp.dataset.field==='weight'&&s.weight)data.lastWeights[session.exercises[+inp.dataset.e].name]=s.weight;save()});
+ $$('.set-input').forEach(inp=>{inp.onchange=()=>{const s=session.exercises[+inp.dataset.e].sets[+inp.dataset.s];s[inp.dataset.field]=Number(inp.value)||0;if(inp.dataset.field==='weight'&&s.weight)data.lastWeights[session.exercises[+inp.dataset.e].name]=s.weight;save()};inp.onkeydown=event=>{if(event.key!=='Enter')return;event.preventDefault();inp.dispatchEvent(new Event('change',{bubbles:true}));const ei=+inp.dataset.e,si=+inp.dataset.s,field=inp.dataset.field,exercise=session.exercises[ei];if(field==='reps')focusSetField(ei,si,'weight');else if(si+1<exercise.sets.length)focusSetField(ei,si+1,'reps');else focusSetField(ei+1,0,'reps')}});
  $$('[data-done]').forEach(b=>b.onclick=()=>{const [ei,si]=b.dataset.done.split(',').map(Number),s=session.exercises[ei].sets[si];s.done=!s.done;if(s.done&&!session.firstSetAt)session.firstSetAt=Date.now();renderSession();if(s.done){startRest();showToast('Set logged')}else stopRest()});
  $$('[data-addset]').forEach(b=>b.onclick=()=>{const e=session.exercises[+b.dataset.addset],prev=e.sets.at(-1);e.sets.push({reps:0,weight:prev?.weight||0,done:false});renderSession()});
  $$('[data-pair]').forEach(b=>b.onclick=()=>{pendingPair=+b.dataset.pair;renderSession()});
