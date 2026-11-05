@@ -26,11 +26,11 @@
     </section>
 
     <section class="screen" id="sessionScreen">
-      <div class="session-header"><button class="back-button" id="endWorkoutButton">← <span>Finish</span></button><div class="session-tools"><button class="unit-toggle" id="unitToggle" aria-label="Switch weight units">LB</button><button class="icon-button small" id="sessionMenuButton">···</button></div></div>
-      <div class="session-title"><p class="eyebrow">WORKOUT IN PROGRESS</p><h1 id="sessionWorkoutName"></h1><p id="sessionProgress"></p><div id="restBar" class="rest-bar" hidden><div class="rest-info"><span class="rest-pulse"></span><span>REST</span><strong id="restClock">00:45</strong></div><div class="rest-track"><span id="restFill"></span></div><button id="skipRestButton">Skip ↗</button></div></div>
+      <div class="session-header"><button class="back-button" id="endWorkoutButton">← <span>Exit</span></button><div class="session-tools"><button class="unit-toggle" id="unitToggle" aria-label="Switch weight units">LB</button></div></div>
+      <div class="session-title"><p class="eyebrow">WORKOUT IN PROGRESS</p><h1 id="sessionWorkoutName"></h1><p id="sessionProgress"></p><button class="finish-button session-finish-prominent" id="finishWorkoutButton">Finish Workout <span>✓</span></button></div>
       <div id="exerciseList" class="exercise-list"></div>
-      <button class="add-exercise-button" id="addExerciseButton">＋ Add exercise</button>
-      <div class="session-bottom"><button class="finish-button" id="finishWorkoutButton">Finish workout <span>✓</span></button></div>
+      <button class="add-exercise-button" id="addExerciseButton">＋ Add Muscle Group</button>
+      <button class="reorder-exercises-button" id="reorderModeButton" aria-pressed="false">Reorder exercises</button>
     </section>
 
     <section class="screen" id="historyScreen">
@@ -38,14 +38,26 @@
       <div id="historyList" class="history-list"></div>
     </section>
 
+    <section class="screen" id="trendsScreen">
+      <div class="greeting"><p class="eyebrow">YOUR WORK, OVER TIME</p><h1>Trends.</h1></div>
+      <div class="trends-week-nav"><button class="trend-nav-button" id="trendsPrevWeek" aria-label="Previous week">‹</button><strong id="trendsWeekLabel"></strong><button class="trend-nav-button" id="trendsNextWeek" aria-label="Next week">›</button></div>
+      <article class="trend-card"><div class="trend-card-head"><div><h2>Consistency</h2><p>A steady routine matters more than a perfect week.</p></div><span class="trend-tag">WEEK</span></div><div class="trend-metrics"><div><strong id="trendWorkoutCount">0</strong><span>workouts</span></div><div><strong>Showing up</strong><span>is the win</span></div></div><div id="trendConsistencyChart"></div></article>
+      <article class="trend-card"><div class="trend-card-head"><div><h2>Muscle coverage</h2><p>Completed sets by primary muscle group</p></div><span class="trend-tag">WEEK</span></div><div id="trendCoverageChart"></div><p class="trend-note">Each logged set is assigned to one primary group. This is a pattern view, not a target prescription.</p></article>
+      <article class="trend-card"><div class="trend-card-head"><div><h2>Weekly working sets</h2><p>Completed working sets, regardless of load</p></div><div class="trend-range" aria-label="Chart range"><button data-trend-range="6">6W</button><button class="selected" data-trend-range="12">12W</button></div></div><div class="trend-metrics"><div><strong id="trendSetCount">0</strong><span>sets this week</span></div></div><div id="trendSetsChart"></div></article>
+      <article class="trend-card"><div class="trend-card-head"><div><h2>Exercise progress</h2><p>Top logged set for a selected exercise</p></div><select id="trendExerciseSelect" class="trend-select" aria-label="Choose exercise"><option value="">Choose exercise</option></select></div><div id="trendExerciseChart"></div><p class="trend-note">This reflects what you logged; effort and tempo are not recorded, so treat it as context rather than a score.</p></article>
+    </section>
+
     <nav class="tabbar" aria-label="Main navigation">
       <button class="tab active" data-screen="homeScreen"><span class="tab-icon">⌂</span>Home</button>
+      <button class="tab" data-screen="trendsScreen"><span class="tab-icon">⌁</span>Trends</button>
       <button class="tab" data-screen="historyScreen"><span class="tab-icon">◷</span>History</button>
     </nav>
   </main>
   <div id="modalRoot"></div>
   <div id="toast" class="toast" role="status"></div>
   <script src="app.js"></script>
+  <script src="trends.js"></script>
 </body>
 </html>
+
 
