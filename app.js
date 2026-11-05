@@ -70,7 +70,7 @@ const workoutSplits=[
  {name:'Back + Biceps',groups:['back','biceps'],hint:'A common setup: 4 back, then 2 biceps exercises.'},
  {name:'Chest + Triceps',groups:['chest','triceps'],hint:'Choose chest first, then triceps.'},
  {name:'Shoulders + Triceps',groups:['shoulders','triceps'],hint:'Choose shoulders first; pair selected exercises if you like.'},
- {name:'Arms',groups:['biceps','triceps'],hint:'Choose 4 biceps and 4 triceps; pair them in alternating sets.'},
+ {name:'Arms (Biceps + Triceps)',groups:['biceps','triceps'],hint:'Choose biceps and triceps exercises; pair them in alternating sets.'},
  {name:'Shoulders',groups:['shoulders'],hint:'Choose the shoulder movements you want today.'},
  {name:'Legs',groups:['legs'],hint:'Squats start with 6 sets; add sets for 7 or 8.'}
 ];
