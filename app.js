@@ -67,8 +67,9 @@ function relevantExercises(name){return groupsForWorkout(name).flatMap(g=>exerci
 const exerciseCatalog=Object.values(exerciseGroups).flat();
 const workoutSplits=[
  {name:'Chest + Shoulders',groups:['chest','shoulders'],hint:'A common setup: 4 chest, then 2 shoulder exercises.'},
- {name:'Back + Biceps',groups:['back','biceps'],hint:'A common setup: 4 back, then 2 biceps exercises.'},
  {name:'Chest + Triceps',groups:['chest','triceps'],hint:'Choose chest first, then triceps.'},
+ {name:'Back + Biceps',groups:['back','biceps'],hint:'A common setup: 4 back, then 2 biceps exercises.'},
+ {name:'Back + Shoulders',groups:['back','shoulders'],hint:'Choose back first, then shoulders.'},
  {name:'Shoulders + Triceps',groups:['shoulders','triceps'],hint:'Choose shoulders first; pair selected exercises if you like.'},
  {name:'Arms (Biceps + Triceps)',groups:['biceps','triceps'],hint:'Choose biceps and triceps exercises; pair them in alternating sets.'},
  {name:'Shoulders',groups:['shoulders'],hint:'Choose the shoulder movements you want today.'},
