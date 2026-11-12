@@ -31,6 +31,7 @@
 .resume-workout-card .primary-button{margin-top:16px}
 .set-actions{display:flex;align-items:center;gap:12px}
 .drop-set-button{padding:5px 0;border:0;background:none;color:var(--orange);font:10px var(--sans);cursor:pointer}
+.drop-set-unavailable{opacity:.38}
 .set-num{display:flex;flex-direction:column;align-items:center;line-height:1.05}
 .drop-set-mark{margin-top:2px;color:var(--orange);font:6px var(--mono);letter-spacing:.02em}
 .set-labels,.set-row{grid-template-columns:30px minmax(0,1fr) minmax(0,1fr) 28px;gap:7px}.set-labels span:last-child{text-align:center}.set-row[data-set-row]{touch-action:pan-y;transition:transform .16s ease,background-color .16s}.set-row[data-set-row].swiping{background:#2b2421;transition:none}
