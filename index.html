@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon.svg">
   <link rel="stylesheet" href="styles.css">
-  <title>SharkForge — Workout log</title>
+  <title>SharkForge — Workout Log</title>
 </head>
 <body>
   <main class="app-shell">
@@ -21,8 +21,8 @@
 
     <section class="screen active" id="homeScreen">
       <div class="greeting"><p class="eyebrow" id="todayDate"></p><h1>What are we<br>training today?</h1></div>
-      <article class="resume-workout-card" id="activeWorkoutCard" hidden><p class="eyebrow">WORKOUT IN PROGRESS</p><h2 id="activeWorkoutName"></h2><p id="activeWorkoutProgress"></p><button class="primary-button" id="resumeWorkoutButton">Resume workout <span>↗</span></button></article>
-      <div class="select-card" id="workoutSelectCard"><p class="eyebrow">BUILD TODAY’S SESSION</p><p>Choose a split, then pick the exercises you want to do.</p><button class="primary-button" id="startWorkoutButton">Select workout <span>↗</span></button></div>
+      <article class="resume-workout-card" id="activeWorkoutCard" hidden><p class="eyebrow">WORKOUT IN PROGRESS</p><h2 id="activeWorkoutName"></h2><p id="activeWorkoutProgress"></p><button class="primary-button" id="resumeWorkoutButton">Resume Workout <span>↗</span></button></article>
+      <div class="select-card" id="workoutSelectCard"><p class="eyebrow">BUILD TODAY’S SESSION</p><p>Choose a split, then pick the exercises you want to do.</p><button class="primary-button" id="startWorkoutButton">Select Workout <span>↗</span></button></div>
       <div class="home-footer"><span class="tiny-dot"></span> Your log stays on this device</div>
     </section>
 
@@ -35,17 +35,17 @@
     </section>
 
     <section class="screen" id="historyScreen">
-      <div class="greeting"><p class="eyebrow">YOUR WORK, OVER TIME</p><h1>Training<br>history.</h1></div>
+      <div class="greeting"><p class="eyebrow">YOUR WORK, OVER TIME</p><h1>Training<br>History.</h1></div>
       <div id="historyList" class="history-list"></div>
     </section>
 
     <section class="screen" id="trendsScreen">
       <div class="greeting"><p class="eyebrow">YOUR WORK, OVER TIME</p><h1>Trends.</h1></div>
       <div class="trends-week-nav"><button class="trend-nav-button" id="trendsPrevWeek" aria-label="Previous week">‹</button><strong id="trendsWeekLabel"></strong><button class="trend-nav-button" id="trendsNextWeek" aria-label="Next week">›</button></div>
-      <article class="trend-card"><div class="trend-card-head"><div><h2>Consistency</h2><p>A steady routine matters more than a perfect week.</p></div><span class="trend-tag">WEEK</span></div><div class="trend-metrics"><div><strong id="trendWorkoutCount">0</strong><span>workouts</span></div><div><strong>Showing up</strong><span>is the win</span></div></div><div id="trendConsistencyChart"></div></article>
-      <article class="trend-card"><div class="trend-card-head"><div><h2>Muscle coverage</h2><p>Completed sets by primary muscle group</p></div><span class="trend-tag">WEEK</span></div><div id="trendCoverageChart"></div><p class="trend-note">Each logged set is assigned to one primary group. This is a pattern view, not a target prescription.</p></article>
-      <article class="trend-card"><div class="trend-card-head"><div><h2>Working sets</h2><p id="trendSetsDescription">Completed sets per week</p></div><select id="trendRangeSelect" class="trend-range-select" aria-label="Working sets chart range"><option value="1">1 month</option><option value="3" selected>3 months</option><option value="6">6 months</option><option value="12">1 year</option></select></div><div class="trend-metrics"><div><strong id="trendSetCount">0</strong><span id="trendSetCountLabel">sets last completed week</span></div></div><div id="trendSetsChart"></div></article>
-      <article class="trend-card"><div class="trend-card-head"><div><h2>Exercise progress</h2><p>Top logged set for a selected exercise</p></div><select id="trendExerciseSelect" class="trend-select" aria-label="Choose exercise"><option value="">Choose exercise</option></select></div><div id="trendExerciseChart"></div><p class="trend-note">This reflects what you logged; effort and tempo are not recorded, so treat it as context rather than a score.</p></article>
+      <article class="trend-card"><div class="trend-card-head"><div><h2>Consistency</h2><p>A steady routine matters more than a perfect week.</p></div><span class="trend-tag">WEEK</span></div><div class="trend-metrics"><div><strong id="trendWorkoutCount">0</strong><span>Workouts</span></div><div><strong>Showing Up</strong><span>Is The Win</span></div></div><div id="trendConsistencyChart"></div></article>
+      <article class="trend-card"><div class="trend-card-head"><div><h2>Muscle Coverage</h2><p>Completed Sets by primary muscle group</p></div><span class="trend-tag">WEEK</span></div><div id="trendCoverageChart"></div><p class="trend-note">Each logged set is assigned to one primary group. This is a pattern view, not a target prescription.</p></article>
+      <article class="trend-card"><div class="trend-card-head"><div><h2>Working Sets</h2><p id="trendSetsDescription">Completed Sets per week</p></div><select id="trendRangeSelect" class="trend-range-select" aria-label="Working Sets chart range"><option value="1">1 Month</option><option value="3" selected>3 Months</option><option value="6">6 Months</option><option value="12">1 Year</option></select></div><div class="trend-metrics"><div><strong id="trendSetCount">0</strong><span id="trendSetCountLabel">Sets last completed week</span></div></div><div id="trendSetsChart"></div></article>
+      <article class="trend-card"><div class="trend-card-head"><div><h2>Exercise Progress</h2><p>Top logged set for a selected exercise</p></div><select id="trendExerciseSelect" class="trend-select" aria-label="Choose Exercise"><option value="">Choose Exercise</option></select></div><div id="trendExerciseChart"></div><p class="trend-note">This reflects what you logged; effort and tempo are not recorded, so treat it as context rather than a score.</p></article>
     </section>
 
     <nav class="tabbar" aria-label="Main navigation">

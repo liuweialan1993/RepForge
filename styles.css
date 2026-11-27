@@ -67,3 +67,6 @@
 .history-delete{font-size:12px}.eyebrow,.home-footer,.set-labels{font-size:12px}
 .trend-note,.trend-empty{font-size:13px}.modal-subtitle{font-size:14px}.empty-state{font-size:14px}
 .drop-set-button{color:var(--orange)}.drop-set-unavailable{opacity:.65}
+
+.drop-set-button,.pair-button,.pair-choice{color:var(--orange);opacity:1}.drop-set-unavailable{opacity:1;color:var(--orange)}
+body{text-transform:capitalize}input,select,textarea{text-transform:none}
