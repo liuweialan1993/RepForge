@@ -38,3 +38,20 @@
 .custom-exercise-list{display:grid;gap:7px;margin-top:12px}.custom-exercise-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px;background:#222923;border:1px solid #333d35;border-radius:10px;font-size:12px}.custom-exercise-row small{display:block;color:var(--muted);font:9px var(--mono);margin-top:3px}.paired-muscle{color:var(--teal)!important;font:8px var(--mono)!important;letter-spacing:.08em}
 
 .set-footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}.set-actions{justify-self:start}.add-set{justify-self:center;border:1px solid #39433b;border-radius:9px;padding:8px 16px;background:#1d241e;font:600 12px var(--sans)}.pair-actions{justify-self:end}.remove-exercise{color:#8e6c5d}.remove-group{background:none;border:0;color:#8e6c5d;font:10px var(--sans);cursor:pointer;letter-spacing:.05em;padding:4px 0}
+
+/* Gym readability: larger type and touch targets */
+.exercise-toggle strong{font-size:17px}.exercise-toggle small{font-size:12px}.exercise-toggle{min-height:54px;padding-top:14px;padding-bottom:14px}
+.set-labels{font-size:11px}.set-num{font-size:13px}.drop-set-mark{font-size:8px}
+.set-labels,.set-row{grid-template-columns:38px 1fr 1fr 44px}.set-row{padding-top:8px;padding-bottom:8px}
+.set-input{font-size:16px;padding:12px 4px}.set-status,.set-done{width:36px;height:36px;font-size:16px}
+.add-set{font-size:14px;padding:10px 18px}.drop-set-button,.pair-button,.pair-choice{font-size:12px;padding:8px 0}
+.finish-button,.primary-button{font-size:15px}.add-exercise-button{font-size:14px;padding:16px}
+.muscle-heading{font-size:12px}.remove-group{font-size:12px;padding:8px 0}.eyebrow{font-size:11px}.brand{font-size:13px}
+.session-title>p:last-child{font-size:14px}.unit-toggle{font-size:12px;padding:8px 10px}.rest-info{font-size:11px}
+.tab{font-size:12px}.tab-icon{font-size:24px}
+.workout-card h3{font-size:16px}.workout-card p{font-size:13px}.home-footer{font-size:11px}
+.modal h2{font-size:24px}.choice-item{font-size:15px;padding:15px}.settings-row{font-size:14px;padding:15px}
+.form-input,.form-select{font-size:16px;padding:14px}.modal-actions button{font-size:14px;padding:14px}
+.history-item h3{font-size:16px}.history-item p{font-size:13px}
+.trend-metrics span{font-size:11px}.trend-card-head p{font-size:13px}.trend-select,.trend-range-select{font-size:12px}
+.toast{font-size:13px;padding:12px 18px}.superset-badge{font-size:10px}
